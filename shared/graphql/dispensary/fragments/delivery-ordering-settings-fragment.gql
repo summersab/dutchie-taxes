@@ -1,0 +1,25 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"deliveryOrderingSettingsFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"DeliveryOrderingSettings"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"baseOrderingSettingsFragment"},"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"deliveryFeeTiers"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"feeInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"maximumInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"minimumInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"feeType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"percentFee"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"deliveryMode"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"deliveryRadius"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"orderMinimum"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"minimumInCents"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"radiusInMiles"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"deliveryZipCodes"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"zipCode"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"feeInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"minimumInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"feeType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"percentFee"},"arguments":[],"directives":[]}]}}]}}],"loc":{"start":0,"end":476}};
+    doc.loc.source = {"body":"#import \"./base-ordering-settings-fragment.gql\"\n\nfragment deliveryOrderingSettingsFragment on DeliveryOrderingSettings {\n  ...baseOrderingSettingsFragment\n  deliveryFeeTiers {\n    feeInCents\n    maximumInCents\n    minimumInCents\n    feeType\n    percentFee\n  }\n  deliveryMode\n  deliveryRadius {\n    orderMinimum {\n      enabled\n      minimumInCents\n    }\n    radiusInMiles\n  }\n  deliveryZipCodes {\n    zipCode\n    feeInCents\n    minimumInCents\n    feeType\n    percentFee\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(require("./base-ordering-settings-fragment.gql").definitions));
+
+
+      module.exports = doc;
+    

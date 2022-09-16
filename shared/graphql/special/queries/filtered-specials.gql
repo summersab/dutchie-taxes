@@ -1,0 +1,122 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"FilteredSpecials"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"specialsFilter"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"filteredSpecialsInput"}}},"directives":[]},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"includeEnterpriseSpecials"}},"type":{"kind":"NamedType","name":{"kind":"Name","value":"Boolean"}},"defaultValue":{"kind":"BooleanValue","value":false},"directives":[]}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"filteredSpecials"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"filter"},"value":{"kind":"Variable","name":{"kind":"Name","value":"specialsFilter"}}},{"kind":"Argument","name":{"kind":"Name","value":"includeEnterpriseSpecials"},"value":{"kind":"Variable","name":{"kind":"Name","value":"includeEnterpriseSpecials"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"queryInfo"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"totalCount"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"specials"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"active"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"menuDisplayName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"menuDisplayDescription"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"bogoConditionLogicOperator"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"menuDisplayImage"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"bogoConditions"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"brandId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"brandName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"categoryName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productGroup"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"quantity"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"weight"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"weightOperator"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"bogoRewardLogicOperator"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"bogoRewards"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"brandId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"brandName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"categoryName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"dollarDiscount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productGroup"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"percentDiscount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"quantity"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"targetPrice"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"weight"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"clicks"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"createdAt"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"createdBy"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"description"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"descriptionHtml"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discountedPrices"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discountPrecedence"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discountStacking"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discountToCart"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discountType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"value"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"dispensaryId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"displayRank"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"emailSpecial"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"endDay"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"endStamp"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"endTime"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"excludedProducts"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"Name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"key"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"conditions"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"Name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"key"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"rewards"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"Name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"key"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"heading"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isRecurring"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"itemsForAPrice"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"value"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"discountBundle"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"applyTo"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"discountType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"limit"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"value"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"menuType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"percentDiscount"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productDiscounts"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productGroup"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"productGroupRewards"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"products"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"recurring"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"days"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"endDate"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"endTime"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"setEndDate"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"startTime"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"redemptionLimit"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"scope"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"source"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"sourceId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"specialId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"specialRestrictions"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"specialType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"stackingBehavior"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"stackingMode"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"startDate"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"startDay"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"startStamp"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"startTime"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"subject"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"targetPrice"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"totalQuantity"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"maxQuantity"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"quantity"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"quantityOperator"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"totalWeight"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"weight"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"weightOperator"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"totalSpend"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"maximumSpend"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"minimumSpend"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"spendOperator"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"updatedAt"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"updatedBy"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"version"},"arguments":[],"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":2512}};
+    doc.loc.source = {"body":"query FilteredSpecials($specialsFilter: filteredSpecialsInput!, $includeEnterpriseSpecials: Boolean = false) {\n  filteredSpecials(filter: $specialsFilter, includeEnterpriseSpecials: $includeEnterpriseSpecials) {\n    queryInfo {\n      totalCount\n    }\n    specials {\n      _id\n      active\n      menuDisplayName\n      menuDisplayDescription\n      bogoConditionLogicOperator\n      menuDisplayImage\n      bogoConditions {\n        _id\n        brandId\n        brandName\n        categoryName\n        productGroup\n        productId\n        quantity\n        weight\n        weightOperator\n      }\n      bogoRewardLogicOperator\n      bogoRewards {\n        _id\n        brandId\n        brandName\n        categoryName\n        dollarDiscount\n        productGroup\n        productId\n        percentDiscount\n        quantity\n        targetPrice\n        weight\n      }\n      clicks\n      createdAt\n      createdBy\n      description\n      descriptionHtml\n      discount\n      discountedPrices\n      discountPrecedence\n      discountStacking\n      discountToCart {\n        _id\n        enabled\n        discountType\n        value\n      }\n      dispensaryId\n      displayRank\n      emailSpecial\n      endDay\n      endStamp\n      endTime\n      excludedProducts {\n        _id\n        Name\n        key\n        conditions {\n          _id\n          Name\n          key\n        }\n        rewards {\n          _id\n          Name\n          key\n        }\n      }\n      heading\n      isRecurring\n      itemsForAPrice {\n        _id\n        enabled\n        value\n      }\n      discountBundle {\n        _id\n        applyTo\n        discountType\n        enabled\n        limit\n        value\n      }\n      menuType\n      name\n      percentDiscount\n      productDiscounts\n      productGroup\n      productGroupRewards\n      products\n      recurring {\n        days\n        endDate\n        endTime\n        setEndDate\n        startTime\n      }\n      redemptionLimit\n      scope\n      source\n      sourceId\n      specialId\n      specialRestrictions\n      specialType\n      stackingBehavior\n      stackingMode\n      startDate\n      startDay\n      startStamp\n      startTime\n      subject\n      targetPrice\n      totalQuantity {\n        enabled\n        maxQuantity\n        quantity\n        quantityOperator\n      }\n      totalWeight {\n        enabled\n        weight\n        weightOperator\n      }\n      totalSpend {\n        enabled\n        maximumSpend\n        minimumSpend\n        spendOperator\n      }\n      updatedAt\n      updatedBy\n      version\n    }\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+    // Collect any fragment/type references from a node, adding them to the refs Set
+    function collectFragmentReferences(node, refs) {
+      if (node.kind === "FragmentSpread") {
+        refs.add(node.name.value);
+      } else if (node.kind === "VariableDefinition") {
+        var type = node.type;
+        if (type.kind === "NamedType") {
+          refs.add(type.name.value);
+        }
+      }
+
+      if (node.selectionSet) {
+        node.selectionSet.selections.forEach(function(selection) {
+          collectFragmentReferences(selection, refs);
+        });
+      }
+
+      if (node.variableDefinitions) {
+        node.variableDefinitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+
+      if (node.definitions) {
+        node.definitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+    }
+
+    var definitionRefs = {};
+    (function extractReferences() {
+      doc.definitions.forEach(function(def) {
+        if (def.name) {
+          var refs = new Set();
+          collectFragmentReferences(def, refs);
+          definitionRefs[def.name.value] = refs;
+        }
+      });
+    })();
+
+    function findOperation(doc, name) {
+      for (var i = 0; i < doc.definitions.length; i++) {
+        var element = doc.definitions[i];
+        if (element.name && element.name.value == name) {
+          return element;
+        }
+      }
+    }
+
+    function oneQuery(doc, operationName) {
+      // Copy the DocumentNode, but clear out the definitions
+      var newDoc = {
+        kind: doc.kind,
+        definitions: [findOperation(doc, operationName)]
+      };
+      if (doc.hasOwnProperty("loc")) {
+        newDoc.loc = doc.loc;
+      }
+
+      // Now, for the operation we're running, find any fragments referenced by
+      // it or the fragments it references
+      var opRefs = definitionRefs[operationName] || new Set();
+      var allRefs = new Set();
+      var newRefs = new Set();
+
+      // IE 11 doesn't support "new Set(iterable)", so we add the members of opRefs to newRefs one by one
+      opRefs.forEach(function(refName) {
+        newRefs.add(refName);
+      });
+
+      while (newRefs.size > 0) {
+        var prevRefs = newRefs;
+        newRefs = new Set();
+
+        prevRefs.forEach(function(refName) {
+          if (!allRefs.has(refName)) {
+            allRefs.add(refName);
+            var childRefs = definitionRefs[refName] || new Set();
+            childRefs.forEach(function(childRef) {
+              newRefs.add(childRef);
+            });
+          }
+        });
+      }
+
+      allRefs.forEach(function(refName) {
+        var op = findOperation(doc, refName);
+        if (op) {
+          newDoc.definitions.push(op);
+        }
+      });
+
+      return newDoc;
+    }
+
+    module.exports = doc;
+    
+        module.exports["FilteredSpecials"] = oneQuery(doc, "FilteredSpecials");
+        

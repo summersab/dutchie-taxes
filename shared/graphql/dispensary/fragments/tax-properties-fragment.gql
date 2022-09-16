@@ -1,0 +1,24 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"taxProperties"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"Dispensaries_TaxConfig_Tax"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"rate"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"potencyRate"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"potency"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"medical"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"recreational"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"taxBasis"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"stages"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"op"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"applyTo"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"types"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"hemp"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"order"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"deliveryPolicy"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"includeStateSalesTaxInDestinationRate"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":274}};
+    doc.loc.source = {"body":"fragment taxProperties on Dispensaries_TaxConfig_Tax {\n  id\n  type\n  name\n  rate\n  potencyRate\n  potency\n  medical\n  recreational\n  taxBasis\n  stages {\n    op\n    type\n  }\n  applyTo {\n    types\n    hemp\n  }\n  order\n  deliveryPolicy\n  includeStateSalesTaxInDestinationRate\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    

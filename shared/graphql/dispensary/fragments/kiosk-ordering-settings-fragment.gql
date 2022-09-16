@@ -1,0 +1,25 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"kioskOrderingSettingsFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"KioskOrderingSettings"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"fullNameOnly"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"phoneRequired"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"notesField"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"directedOrders"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"hideEmailField"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"hidePhoneField"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"showBirthdateField"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"kioskInstructions"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"paymentTypes"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"paymentTypesFragment"},"directives":[]}]}}]}}],"loc":{"start":0,"end":303}};
+    doc.loc.source = {"body":"#import \"./payment-types-fragment.gql\"\n\nfragment kioskOrderingSettingsFragment on KioskOrderingSettings {\n  enabled\n  fullNameOnly\n  phoneRequired\n  notesField\n  directedOrders\n  hideEmailField\n  hidePhoneField\n  showBirthdateField\n  kioskInstructions\n  paymentTypes {\n    ...paymentTypesFragment\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(require("./payment-types-fragment.gql").definitions));
+
+
+      module.exports = doc;
+    

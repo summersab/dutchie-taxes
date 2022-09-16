@@ -1,0 +1,45 @@
+var map = {
+	".": 62496,
+	"./": 62496,
+	"./analytics": 17213,
+	"./analytics.tsx": 17213,
+	"./dispensaries": 69330,
+	"./dispensaries/": 69330,
+	"./dispensaries/columns": 5577,
+	"./dispensaries/columns.jsx": 5577,
+	"./dispensaries/index": 69330,
+	"./dispensaries/index.jsx": 69330,
+	"./hooks/use-chain-admins-links": 94268,
+	"./hooks/use-chain-admins-links.tsx": 94268,
+	"./index": 62496,
+	"./index.tsx": 62496,
+	"./orders": 88675,
+	"./orders.tsx": 88675,
+	"./settings": 42673,
+	"./settings.jsx": 42673
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	if(!__webpack_require__.m[id]) {
+		var e = new Error("Module '" + req + "' ('" + id + "') is not available (weak dependency)");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+webpackContext.id = 52822;
+module.exports = webpackContext;

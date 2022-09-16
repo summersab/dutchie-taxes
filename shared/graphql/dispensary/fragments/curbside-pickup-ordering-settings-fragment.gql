@@ -1,0 +1,25 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"curbsidePickupOrderingSettingsFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"CurbsidePickupOrderingSettings"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"baseOrderingSettingsFragment"},"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"orderMinimum"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"minimumInCents"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"enableCurbsideArrivals"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"arrivalInformationInstructions"},"arguments":[],"directives":[]}]}}],"loc":{"start":0,"end":279}};
+    doc.loc.source = {"body":"#import \"./base-ordering-settings-fragment.gql\"\n\nfragment curbsidePickupOrderingSettingsFragment on CurbsidePickupOrderingSettings {\n  ...baseOrderingSettingsFragment\n  orderMinimum {\n    enabled\n    minimumInCents\n  }\n  enableCurbsideArrivals\n  arrivalInformationInstructions\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(require("./base-ordering-settings-fragment.gql").definitions));
+
+
+      module.exports = doc;
+    

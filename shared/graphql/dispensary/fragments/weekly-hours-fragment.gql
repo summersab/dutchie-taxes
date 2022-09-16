@@ -1,0 +1,25 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"weeklyHoursFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"WeeklyHours"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"Friday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"Monday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"Saturday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"Sunday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"Thursday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"Tuesday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"Wednesday"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"hoursForDay"},"directives":[]}]}}]}}],"loc":{"start":0,"end":325}};
+    doc.loc.source = {"body":"#import \"./hours-for-day.gql\"\n\nfragment weeklyHoursFragment on WeeklyHours {\n  Friday {\n    ...hoursForDay\n  }\n  Monday {\n    ...hoursForDay\n  }\n  Saturday {\n    ...hoursForDay\n  }\n  Sunday {\n    ...hoursForDay\n  }\n  Thursday {\n    ...hoursForDay\n  }\n  Tuesday {\n    ...hoursForDay\n  }\n  Wednesday {\n    ...hoursForDay\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(require("./hours-for-day.gql").definitions));
+
+
+      module.exports = doc;
+    

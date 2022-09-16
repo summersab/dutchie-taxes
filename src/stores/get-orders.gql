@@ -1,0 +1,122 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetOrders"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"input"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"getOrdersInput"}}},"directives":[]}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"getOrders"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"input"},"value":{"kind":"Variable","name":{"kind":"Name","value":"input"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"orders"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"createdAt"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"customerId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"customerEmail"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"customerName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"customerPhone"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"firstName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"lastName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"delivery"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"durationEstimates"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"delivery"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"lowInMinutes"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"highInMinutes"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"pickup"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"lowInMinutes"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"highInMinutes"},"arguments":[],"directives":[]}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"deliveryInfo"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"address"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"apartmentNum"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"deliveryAddress"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"deliveryOption"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"lastSearchedAddress"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"nonDeliveryAddress"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"dispensaryId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"dispensaryName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"dispoTimezone"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"deliveryOption"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"duration"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"effectiveStatus"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"orderId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"orderType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"status"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"reopened"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"totalCost"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isAnonymous"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isKioskOrder"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"isAfterHoursOrder"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"fleetManagementTask"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"adapter"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"pos"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"externalID"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"failureAcks"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"terminal"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"web"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"failureReason"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"failureType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"humanReadableError"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"reservation"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"startTimeISO"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"endTimeISO"},"arguments":[],"directives":[]}]}}]}}]}}]}}],"loc":{"start":0,"end":1167}};
+    doc.loc.source = {"body":"query GetOrders($input: getOrdersInput!) {\n  getOrders(input: $input) {\n    orders {\n      createdAt\n      customerId\n      customerEmail\n      customerName\n      customerPhone\n      firstName\n      lastName\n      delivery\n      durationEstimates {\n        delivery {\n          lowInMinutes\n          highInMinutes\n        }\n        pickup {\n          lowInMinutes\n          highInMinutes\n        }\n      }\n      deliveryInfo {\n        address\n        apartmentNum\n        deliveryAddress\n        deliveryOption\n        lastSearchedAddress\n        nonDeliveryAddress\n      }\n      dispensaryId\n      dispensaryName\n      dispoTimezone\n      deliveryOption\n      duration\n      effectiveStatus\n      orderId\n      orderType\n      status\n      reopened\n      totalCost\n      isAnonymous\n      isKioskOrder\n      isAfterHoursOrder\n      _id\n      fleetManagementTask {\n        id\n        adapter\n      }\n      pos {\n        externalID\n        failureAcks {\n          terminal\n          web\n        }\n        failureReason\n        failureType\n        humanReadableError\n        name\n      }\n      reservation {\n        startTimeISO\n        endTimeISO\n      }\n    }\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+    // Collect any fragment/type references from a node, adding them to the refs Set
+    function collectFragmentReferences(node, refs) {
+      if (node.kind === "FragmentSpread") {
+        refs.add(node.name.value);
+      } else if (node.kind === "VariableDefinition") {
+        var type = node.type;
+        if (type.kind === "NamedType") {
+          refs.add(type.name.value);
+        }
+      }
+
+      if (node.selectionSet) {
+        node.selectionSet.selections.forEach(function(selection) {
+          collectFragmentReferences(selection, refs);
+        });
+      }
+
+      if (node.variableDefinitions) {
+        node.variableDefinitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+
+      if (node.definitions) {
+        node.definitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+    }
+
+    var definitionRefs = {};
+    (function extractReferences() {
+      doc.definitions.forEach(function(def) {
+        if (def.name) {
+          var refs = new Set();
+          collectFragmentReferences(def, refs);
+          definitionRefs[def.name.value] = refs;
+        }
+      });
+    })();
+
+    function findOperation(doc, name) {
+      for (var i = 0; i < doc.definitions.length; i++) {
+        var element = doc.definitions[i];
+        if (element.name && element.name.value == name) {
+          return element;
+        }
+      }
+    }
+
+    function oneQuery(doc, operationName) {
+      // Copy the DocumentNode, but clear out the definitions
+      var newDoc = {
+        kind: doc.kind,
+        definitions: [findOperation(doc, operationName)]
+      };
+      if (doc.hasOwnProperty("loc")) {
+        newDoc.loc = doc.loc;
+      }
+
+      // Now, for the operation we're running, find any fragments referenced by
+      // it or the fragments it references
+      var opRefs = definitionRefs[operationName] || new Set();
+      var allRefs = new Set();
+      var newRefs = new Set();
+
+      // IE 11 doesn't support "new Set(iterable)", so we add the members of opRefs to newRefs one by one
+      opRefs.forEach(function(refName) {
+        newRefs.add(refName);
+      });
+
+      while (newRefs.size > 0) {
+        var prevRefs = newRefs;
+        newRefs = new Set();
+
+        prevRefs.forEach(function(refName) {
+          if (!allRefs.has(refName)) {
+            allRefs.add(refName);
+            var childRefs = definitionRefs[refName] || new Set();
+            childRefs.forEach(function(childRef) {
+              newRefs.add(childRef);
+            });
+          }
+        });
+      }
+
+      allRefs.forEach(function(refName) {
+        var op = findOperation(doc, refName);
+        if (op) {
+          newDoc.definitions.push(op);
+        }
+      });
+
+      return newDoc;
+    }
+
+    module.exports = doc;
+    
+        module.exports["GetOrders"] = oneQuery(doc, "GetOrders");
+        

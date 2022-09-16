@@ -1,0 +1,26 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"hoursSettingsForOrderTypeFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"HoursSettingsForOrderType"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"hours"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"weeklyHoursFragment"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"specialHours"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"specialHoursFragment"},"directives":[]}]}}]}}],"loc":{"start":0,"end":244}};
+    doc.loc.source = {"body":"#import \"./weekly-hours-fragment.gql\"\n#import \"./special-hours-fragment.gql\"\n\nfragment hoursSettingsForOrderTypeFragment on HoursSettingsForOrderType {\n  hours {\n    ...weeklyHoursFragment\n  }\n  specialHours {\n    ...specialHoursFragment\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(require("./weekly-hours-fragment.gql").definitions));
+doc.definitions = doc.definitions.concat(unique(require("./special-hours-fragment.gql").definitions));
+
+
+      module.exports = doc;
+    

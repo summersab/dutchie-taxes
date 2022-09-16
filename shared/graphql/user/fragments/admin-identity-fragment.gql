@@ -1,0 +1,24 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"adminIdentityFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"LoginAdmin"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"accessToken"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"user"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"_id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"createdAt"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"emails"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"address"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"profile"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"browserNotification"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"chainID"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"desktopNotification"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"dispensaryId"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"emailNotifications"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"emailOptIn"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"firstName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"fullName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"lastName"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"permissions"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allLocations"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"billing"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"analytics"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"customers"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"driver"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enterpriseAdmin"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enterpriseSpecials"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"menu"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"menuReview"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"superMenuReview"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"orders"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"promote"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"settings"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"users"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"tasks"},"arguments":[],"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"phone"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"textNotifications"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]}]}}]}}]}}],"loc":{"start":0,"end":670}};
+    doc.loc.source = {"body":"fragment adminIdentityFragment on LoginAdmin {\n  accessToken\n  user {\n    _id\n    createdAt\n    emails {\n      address\n    }\n    profile {\n      browserNotification\n      chainID\n      desktopNotification\n      dispensaryId\n      emailNotifications\n      emailOptIn\n      firstName\n      fullName\n      lastName\n      permissions {\n        allLocations\n        billing\n        analytics\n        customers\n        driver\n        enterpriseAdmin\n        enterpriseSpecials\n        menu\n        menuReview\n        superMenuReview\n        orders\n        promote\n        settings\n        users\n        tasks\n      }\n      phone\n      textNotifications\n      type\n    }\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    

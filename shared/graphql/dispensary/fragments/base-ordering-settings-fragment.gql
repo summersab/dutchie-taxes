@@ -1,0 +1,25 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"baseOrderingSettingsFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"BaseOrderingSettings"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"enableASAPOrdering"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enableScheduledOrdering"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"enableAfterHoursOrdering"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"paymentTypes"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"FragmentSpread","name":{"kind":"Name","value":"paymentTypesFragment"},"directives":[]}]}},{"kind":"Field","name":{"kind":"Name","value":"scheduledOrderingConfigV2"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"advancedDayOrderingEnabled"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"advancedDayOrderingLimit"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"incrementInMinutes"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"nextAvailableInMinutes"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"orderLimitsEnabled"},"arguments":[],"directives":[]}]}}]}}],"loc":{"start":0,"end":396}};
+    doc.loc.source = {"body":"#import \"./payment-types-fragment.gql\"\n\nfragment baseOrderingSettingsFragment on BaseOrderingSettings {\n  enableASAPOrdering\n  enableScheduledOrdering\n  enableAfterHoursOrdering\n  paymentTypes {\n    ...paymentTypesFragment\n  }\n  scheduledOrderingConfigV2 {\n    advancedDayOrderingEnabled\n    advancedDayOrderingLimit\n    incrementInMinutes\n    nextAvailableInMinutes\n    orderLimitsEnabled\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  doc.definitions = doc.definitions.concat(unique(require("./payment-types-fragment.gql").definitions));
+
+
+      module.exports = doc;
+    

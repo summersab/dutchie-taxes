@@ -1,0 +1,24 @@
+
+    var doc = {"kind":"Document","definitions":[{"kind":"FragmentDefinition","name":{"kind":"Name","value":"deliveryZonesFragment"},"typeCondition":{"kind":"NamedType","name":{"kind":"Name","value":"DeliveryOrderingSettings"}},"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"deliveryZones"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"area"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"features"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"geometry"},"arguments":[],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"type"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"coordinates"},"arguments":[],"directives":[]}]}}]}}]}},{"kind":"Field","name":{"kind":"Name","value":"feeInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"minimumInCents"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"feeType"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"percentFee"},"arguments":[],"directives":[]}]}}]}}],"loc":{"start":0,"end":287}};
+    doc.loc.source = {"body":"fragment deliveryZonesFragment on DeliveryOrderingSettings {\n  deliveryZones {\n    name\n    area {\n      type\n      features {\n        type\n        geometry {\n          type\n          coordinates\n        }\n      }\n    }\n    feeInCents\n    minimumInCents\n    feeType\n    percentFee\n  }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+      module.exports = doc;
+    
