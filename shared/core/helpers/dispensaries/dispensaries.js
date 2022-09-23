@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import moment from 'moment';
-import { removeTypename } from 'shared/helpers/utils';
-import { findNextOpenDay, guessTimezone } from 'shared/helpers/date-time';
-import { CanadianDefaultRewardProgramName, DefaultRewardProgramName } from '../../constants/dispensaries';
-import { getComplianceConfig } from '../compliance';
+import { removeTypename } from '../../../../shared/helpers/utils.js';
+import { findNextOpenDay, guessTimezone } from '../../../../shared/helpers/date-time.js';
+import { CanadianDefaultRewardProgramName, DefaultRewardProgramName } from '../../constants/dispensaries.js';
+import { getComplianceConfig } from '../compliance.js';
 
 const getOpenInfo = ({
   serviceType,

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import numeral from 'numeral';
-import { CannabinoidAbbrev } from 'shared/constants/cannabinoids';
-import { NUMERALS_DOLLAR_FORMAT } from 'shared/constants';
+import { CannabinoidAbbrev } from '../../shared/constants/cannabinoids.js';
+import { NUMERALS_DOLLAR_FORMAT } from '../../shared/constants/index.js';
 
 function extractValidationErrors(graphQLErrors) {
   const errors = _.filter(graphQLErrors, ['extensions.code', 'UNPROCESSABLE_ENTITY']);

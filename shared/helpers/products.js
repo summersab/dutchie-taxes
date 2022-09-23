@@ -1,20 +1,37 @@
 /* eslint-disable max-len */
 import _ from 'lodash';
-import flow from 'lodash/fp/flow';
-import map from 'lodash/fp/map';
-import filter from 'lodash/fp/filter';
-import uniqBy from 'lodash/fp/uniqBy';
-import { isBlank } from 'underscore.string';
+import flow from 'lodash/fp/flow.js';
+import map from 'lodash/fp/map.js';
+import filter from 'lodash/fp/filter.js';
+import uniqBy from 'lodash/fp/uniqBy.js';
+import isBlank from 'underscore.string';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import Big from 'big.js';
-import { safeToBig } from 'shared/helpers/utils_math';
-import { taxes } from 'shared/order/taxes';
-import { isRecOnly, isMedOnly } from 'shared/core/helpers/dispensaries';
-import { getComplianceConfig } from 'shared/core/helpers/compliance';
+import { safeToBig } from '../../shared/helpers/utils_math.js';
+import { taxes } from '../../shared/order/taxes.js';
+import { isRecOnly, isMedOnly } from '../../shared/core/helpers/dispensaries/dispensaries.js';
+import { getComplianceConfig } from '../../shared/core/helpers/compliance.js';
 import {
   DefaultImages,
   DefaultImagesList,
+//  POTENCY_TYPES,
+//  POTENCY_UNITS,
+//  POTENCY_UNITS_DISPLAY,
+//  productEffects,
+//  StrainTypeOrder,
+//  MILLIGRAMS,
+//  MG_TO_G,
+//  MILLILITERS,
+//  LEGACY_AWS_SOURCE,
+//  IMGIX_SOURCE,
+//  WeightedSubcategories,
+} from '../../shared/constants/content.js';
+import {
+  LEGACY_AWS_SOURCE,
+  IMGIX_SOURCE
+} from '../../shared/constants/index.js';
+import {
   POTENCY_TYPES,
   POTENCY_UNITS,
   POTENCY_UNITS_DISPLAY,
@@ -23,11 +40,8 @@ import {
   MILLIGRAMS,
   MG_TO_G,
   MILLILITERS,
-  LEGACY_AWS_SOURCE,
-  IMGIX_SOURCE,
   WeightedSubcategories,
-} from 'shared/constants';
-import {
+  
   GRAM_TO_OZ,
   GRAM_WEIGHT_REGEX,
   OZ_WEIGHT_REGEX,
@@ -41,9 +55,9 @@ import {
   SubcategoryOptions,
   FloridaOralSubcategories,
   CategoryDisplayNames,
-} from 'shared/constants/products';
-import { CannabinoidAbbrev } from 'shared/constants/cannabinoids';
-import { parseNoidAbbreviation } from 'shared/utils/misc-utils';
+} from '../../shared/constants/products.js';
+import { CannabinoidAbbrev } from '../../shared/constants/cannabinoids.js';
+import { parseNoidAbbreviation } from '../../shared/utils/misc-utils.js';
 
 // https://github.com/pmmmwh/react-refresh-webpack-plugin/blob/main/docs/TROUBLESHOOTING.md#usage-with-indirection-like-workers-and-js-templates
 /* eslint-disable no-unused-vars */

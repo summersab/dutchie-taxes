@@ -1,5 +1,7 @@
-const Big = require('big.js');
-const _ = require('lodash');
+//const Big = require('big.js');
+//const _ = require('lodash');
+import Big from 'big.js';
+import _ from 'lodash';
 
 /*
  * Tax configuration is stored in a list of objects which look like

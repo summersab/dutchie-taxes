@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import { productEffects } from './products';
+import { productEffects } from './products.js';
 
 /**
  * @type {Object.<string: string>}

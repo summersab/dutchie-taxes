@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import Big from 'big.js';
-import { calcTaxes, flattenTaxes, layerOrder, relevantTaxRules, sumTaxesAtLayer } from 'shared/helpers/taxes';
-import { getProductWeight, productSatisfiesSaleWeight, getSalesType } from 'shared/helpers/products';
+import { calcTaxes, flattenTaxes, layerOrder, relevantTaxRules, sumTaxesAtLayer } from '../../shared/helpers/taxes.js';
+import { getProductWeight, productSatisfiesSaleWeight, getSalesType } from '../../shared//helpers/products.js';
 
 const findStageIndex = (stage) => _.findIndex(layerOrder, (s) => s === stage);
 

@@ -1,4 +1,4 @@
-import { parseNoidAbbreviation } from '../utils/misc-utils';
+import { parseNoidAbbreviation } from '../utils/misc-utils.js';
 
 export const CannabinoidAbbrev = {
   TAC: 'TAC',

@@ -4,13 +4,13 @@ import {
   canadianProvincesMap,
   JamaicanParishesMap,
   saintVincentAndTheGrenadinesParishesMap,
-} from '../constants/geography';
+} from '../constants/geography.js';
 import {
   stateComplianceRules,
   canadaDefaults,
   jamaicanDefaults,
   saintVincentAndTheGrenadinesDefaults,
-} from '../constants/compliance';
+} from '../constants/compliance.js';
 
 export const getComplianceConfig = (state, key) => {
   // all of canada has the same compliance info except for Alberta and Ontario

@@ -1,4 +1,4 @@
-import _invert from 'lodash/invert';
+import _invert from 'lodash/invert.js';
 
 export const countryMap = {
   US: 'United States',

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import moment from 'moment';
 
-import { daysOfWeek } from 'shared/constants/time';
+import { daysOfWeek } from '../../shared/constants/time.js';
 
 /**
  * Checks if the window has an orientation property, which

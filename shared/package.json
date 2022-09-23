@@ -1,0 +1,13 @@
+{
+	"name": "shared",
+	"type": "module",
+	"dependencies": {
+		"lodash": "4.17.21",
+		"big.js": "3.2.0",
+		"underscore.string": "3.3.6",
+		"moment": "2.29.4",
+		"deep-freeze": "0.0.1",
+		"numeral": "2.0.6",
+		"moment-timezone": "0.5.37"
+	}
+}
